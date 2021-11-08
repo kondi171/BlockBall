@@ -1,0 +1,94 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include \char`\"{}headers.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxysubsection*{Main Game}
+
+That is the heart of game. Here are declaration of variables and main game loop
+
+\doxyparagraph*{C++ Variables}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{float FPS}} -\/ Number of frames per second  
+\item {\bfseries{int Screen\+Width}} -\/ Window width 
+\item {\bfseries{int Screen\+Height}} -\/ Window height 
+\item {\bfseries{bool Done}} -\/ Start main loop 
+\item {\bfseries{bool Draw}} -\/ Draw statement 
+\item {\bfseries{bool Reverse\+Ball\+One}} -\/ Reverse first player ball 
+\item {\bfseries{bool Reverse\+Ball\+Two}} -\/ Reverse second player ball 
+\item {\bfseries{bool Start\+Ball\+One}} -\/ Start first player ball 
+\item {\bfseries{bool Start\+Ball\+Two}} -\/ Start second player ball 
+\item {\bfseries{bool Select}} -\/ Select Mode 
+\item {\bfseries{bool Exit}} -\/ Exit state 
+\item {\bfseries{bool End\+Game}} -\/ End Game state 
+\item {\bfseries{bool Show\+Help}} -\/ Help state 
+\item {\bfseries{int Paddle\+One}} -\/ Coordinates of first player paddle 
+\item {\bfseries{int Paddle\+Two}} -\/ Coordinates of second player paddle 
+\item {\bfseries{int Move\+Speed}} -\/ Paddle speed 
+\item {\bfseries{int Title\+Color\mbox{[}3\mbox{]}}} -\/ Title color in array 
+\item {\bfseries{int Ball\+One\+Direction}} -\/ Direction of first ball 
+\item {\bfseries{int Ball\+Two\+Direction}} -\/ Direction of second ball 
+\item {\bfseries{int Ball\+TwoX}} -\/ X-\/\+Coordinate second ball 
+\item {\bfseries{int Ball\+TwoY}} -\/ Y-\/\+Coordinate second ball 
+\item {\bfseries{int Ball\+OneX}} -\/ X-\/\+Coordinate first ball 
+\item {\bfseries{int Ball\+OneY}} -\/ Y-\/\+Coordinate first ball 
+\item {\bfseries{float Ball\+Two\+MoveX}} -\/ X-\/\+Speed second ball 
+\item {\bfseries{float Ball\+Two\+MoveY}} -\/ Y-\/\+Speed second ball 
+\item {\bfseries{float Ball\+One\+MoveX}} -\/ X-\/\+Speed first ball 
+\item {\bfseries{float Ball\+One\+MoveY}} -\/ Y-\/\+Speed first ball 
+\item {\bfseries{int Player\+One\+Score}} -\/ Score of first player 
+\item {\bfseries{int Player\+Two\+Score}} -\/ Score of second player 
+\item {\bfseries{int Player\+One\+Block}} -\/ Destroyed blocks of first player 
+\item {\bfseries{int Player\+Two\+Block}} -\/ Destroyed blocks of second player 
+\item {\bfseries{int Player\+One\+Life}} -\/ First player life counter 
+\item {\bfseries{int Player\+Two\+Life}} -\/ Second player life counter 
+\item {\bfseries{int Option}} -\/ Choose mode 
+\item {\bfseries{bool Full\+Screen}} -\/ Fullscreen or window 
+\item {\bfseries{bool One\+Player\+Mode}} -\/ One player Mode flag 
+\item {\bfseries{bool Menu\+State}} -\/ Menu state flag 
+\item {\bfseries{bool Save\+Load}} -\/ Ability to save or load game 
+\item {\bfseries{bool Load}} -\/ End of loading 
+\item {\bfseries{int Difficult\+Level}} -\/ Difficult level depend on game mode 
+\item {\bfseries{int Loaded\+Bricks\mbox{[}35\mbox{]}}} -\/ coordinates of bricks loaded from a file 
+\item {\bfseries{\mbox{\hyperlink{class_brick}{Brick}} New\+Block\mbox{[}35\mbox{]} }} -\/ Current game blocks. Original Coordinates of blocks 
+\item {\bfseries{\mbox{\hyperlink{class_brick}{Brick}} Const\+Block\mbox{[}35\mbox{]}}} -\/ Copied blocks from file 
+\end{DoxyItemize}\doxyparagraph*{Allegro Variables}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{ALLEGRO\+\_\+\+KEYBOARD\+\_\+\+STATE Key\+State}} -\/ Keyboard Listener 
+\item {\bfseries{ALLEGRO\+\_\+\+DISPLAY $\ast$ Display}} -\/ Window 
+\item {\bfseries{ALLEGRO\+\_\+\+FONT $\ast$ Base\+Font}} -\/ Main font 
+\item {\bfseries{ALLEGRO\+\_\+\+FONT $\ast$ First\+Font}} -\/ Another font 
+\item {\bfseries{ALLEGRO\+\_\+\+FONT $\ast$ Second\+Font}} -\/ Another Font 
+\item {\bfseries{ALLEGRO\+\_\+\+FONT $\ast$ Micro\+Font}} -\/ Font like second font but smaller 
+\item {\bfseries{ALLEGRO\+\_\+\+TIMER $\ast$ Main\+Timer}} -\/ Main game timer 
+\item {\bfseries{ALLEGRO\+\_\+\+TIMER $\ast$ Ball\+One\+Impact\+Timer}} -\/ Timer for ball one impact with wall 
+\item {\bfseries{ALLEGRO\+\_\+\+TIMER $\ast$ Ball\+Two\+Impact\+Timer}} -\/ Timer for ball two impact with wall 
+\item {\bfseries{ALLEGRO\+\_\+\+TIMER $\ast$ Paddle\+One\+Impact\+Timer}} -\/ Timer for ball one paddles 
+\item {\bfseries{ALLEGRO\+\_\+\+TIMER $\ast$ Paddle\+Two\+Impact\+Timer}} -\/ Timer for ball two paddles 
+\item {\bfseries{ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE $\ast$ Event\+Queue}} -\/ Event Queue 
+\item {\bfseries{ALLEGRO\+\_\+\+BITMAP $\ast$ Heart}} -\/ Heart bitmap 
+\item {\bfseries{ALLEGRO\+\_\+\+BITMAP $\ast$ Break\+Heart}} -\/ Broken heart bitmap 
+\item {\bfseries{ALLEGRO\+\_\+\+SAMPLE $\ast$ Ball\+Block}} -\/ Impact ball-\/block audio 
+\item {\bfseries{ALLEGRO\+\_\+\+SAMPLE $\ast$ Wall\+Impact}} -\/ Impact ball-\/wall audio 
+\item {\bfseries{ALLEGRO\+\_\+\+SAMPLE $\ast$ Paddle\+Impact}} -\/ Impact ball-\/paddle audio 
+\item {\bfseries{ALLEGRO\+\_\+\+SAMPLE $\ast$ Lost\+Life}} -\/ Lost life audio 
+\item {\bfseries{ALLEGRO\+\_\+\+SAMPLE $\ast$ End}} -\/ End game music 
+\item {\bfseries{ALLEGRO\+\_\+\+SAMPLE $\ast$ Main\+Music}} -\/ Main game music 
+\item {\bfseries{ALLEGRO\+\_\+\+SAMPLE $\ast$ Menu\+Music}} -\/ Menu music 
+\end{DoxyItemize}

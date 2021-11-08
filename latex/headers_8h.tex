@@ -1,0 +1,764 @@
+\hypertarget{headers_8h}{}\doxysection{headers.\+h File Reference}
+\label{headers_8h}\index{headers.h@{headers.h}}
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+native\+\_\+dialog.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+font.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+primitives.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+audio.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+acodec.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_brick}{Brick}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{headers_8h_a90014b4647cbb3b1935140c8ebb542b1}{Stealth}} ()
+\item 
+int \mbox{\hyperlink{headers_8h_a029ad5750e06a0c4b917ff5f09986ef7}{Initialize\+Library}} ()
+\item 
+ALLEGRO\+\_\+\+DISPLAY $\ast$ \mbox{\hyperlink{headers_8h_a61ffca78033574a64abb885014078bf1}{Display\+Window}} (int Screen\+Width, int Screen\+Hight, bool Full\+Screen)
+\item 
+void \mbox{\hyperlink{headers_8h_a37777aad04880fea227c1817d1dd24ce}{All\+Destroy}} (ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE $\ast$Event\+Queue, ALLEGRO\+\_\+\+FONT $\ast$Base\+Font, ALLEGRO\+\_\+\+FONT $\ast$First\+Font, ALLEGRO\+\_\+\+FONT $\ast$Second\+Font, ALLEGRO\+\_\+\+FONT $\ast$Micro\+Font, ALLEGRO\+\_\+\+DISPLAY $\ast$Display, ALLEGRO\+\_\+\+BITMAP $\ast$Heart, ALLEGRO\+\_\+\+BITMAP $\ast$Break\+Heart)
+\item 
+void \mbox{\hyperlink{headers_8h_ab9de1d4e087cace00474f81924869bee}{Destroy\+Sounds}} (ALLEGRO\+\_\+\+SAMPLE $\ast$Ball\+Block, ALLEGRO\+\_\+\+SAMPLE $\ast$Wall\+Impact, ALLEGRO\+\_\+\+SAMPLE $\ast$Paddle\+Impact, ALLEGRO\+\_\+\+SAMPLE $\ast$Lost\+Life, ALLEGRO\+\_\+\+SAMPLE $\ast$End, ALLEGRO\+\_\+\+SAMPLE $\ast$Main\+Music, ALLEGRO\+\_\+\+SAMPLE $\ast$Menu\+Music)
+\item 
+void \mbox{\hyperlink{headers_8h_ac03ecad132999f1d1062581ac347be9b}{Destroy\+Timers}} (ALLEGRO\+\_\+\+TIMER $\ast$Main\+Timer, ALLEGRO\+\_\+\+TIMER $\ast$Ball\+One\+Impact\+Timer, ALLEGRO\+\_\+\+TIMER $\ast$Ball\+Two\+Impact\+Timer, ALLEGRO\+\_\+\+TIMER $\ast$Paddle\+One\+Impact\+Timer, ALLEGRO\+\_\+\+TIMER $\ast$Paddle\+Two\+Impact\+Timer)
+\item 
+void \mbox{\hyperlink{headers_8h_a14bfe48bdd3fa3e81c9f4fdb637076a9}{Intro}} (ALLEGRO\+\_\+\+FONT $\ast$Base\+Font, ALLEGRO\+\_\+\+FONT $\ast$First\+Font, const int First\+Color\mbox{[}$\,$\mbox{]}, const int Title\+Color\mbox{[}$\,$\mbox{]}, int Screen\+Width, int Screen\+Hight, int Option, bool Fullscreen)
+\item 
+void \mbox{\hyperlink{headers_8h_a08218ac79861d2c31d0896c92b2b4170}{Draw\+Board}} (int Screen\+Width, int Screen\+Height, int Title\+Color\mbox{[}$\,$\mbox{]}, int First\+Color\mbox{[}$\,$\mbox{]}, ALLEGRO\+\_\+\+FONT $\ast$Base\+Font, ALLEGRO\+\_\+\+FONT $\ast$First\+Font, ALLEGRO\+\_\+\+FONT $\ast$Second\+Font, ALLEGRO\+\_\+\+FONT $\ast$Help\+Font, int Player\+One\+Score, int Player\+Two\+Score, int Player\+One\+Life, int Player\+Two\+Life, float Player\+One\+Speed\+Ball, float Player\+Two\+Speed\+Ball, int Player\+One\+Block, int Player\+Two\+Block, ALLEGRO\+\_\+\+BITMAP $\ast$Heart, ALLEGRO\+\_\+\+BITMAP $\ast$Break\+Heart, bool Exit, bool Game\+Over, ALLEGRO\+\_\+\+SAMPLE $\ast$Main\+Music)
+\item 
+bool \mbox{\hyperlink{headers_8h_aa7ea3f85f577a4ce8575e7bc6812f8f0}{Block\+Collision}} (\mbox{\hyperlink{class_brick}{Brick}} New\+Block\mbox{[}$\,$\mbox{]}, int Index, ALLEGRO\+\_\+\+SAMPLE $\ast$Ball\+Block)
+\item 
+bool \mbox{\hyperlink{headers_8h_a0b8db31b01ace67c182a0e1596b2060b}{Check\+Collision}} (int BallY, int BallX, bool \mbox{\hyperlink{headers_8h_a80ec5de73d51522df4f66c91587f6267}{Reverse\+Ball}}, \mbox{\hyperlink{class_brick}{Brick}} New\+Block\mbox{[}$\,$\mbox{]}, ALLEGRO\+\_\+\+SAMPLE $\ast$Ball\+Block)
+\item 
+void \mbox{\hyperlink{headers_8h_a0cbe49f7ea9549a5ba0fe1e69068ca95}{Show\+Life}} (int Player\+One\+Life, int Player\+Two\+Life, ALLEGRO\+\_\+\+BITMAP $\ast$Heart, ALLEGRO\+\_\+\+BITMAP $\ast$Break\+Heart)
+\item 
+void \mbox{\hyperlink{headers_8h_afe14a0514f9b13b3d8d7dd75d371f3aa}{Set}} (int Option, int Screen\+Height, int Screen\+Width)
+\item 
+void \mbox{\hyperlink{headers_8h_ae758dbf2670414b04be3eb553b89c950}{Outro}} (ALLEGRO\+\_\+\+FONT $\ast$First\+Font, ALLEGRO\+\_\+\+FONT $\ast$Second\+Font, int First\+Color\mbox{[}$\,$\mbox{]}, int Title\+Color\mbox{[}$\,$\mbox{]}, int Screen\+Width, int Screen\+Hight, int Option)
+\item 
+void \mbox{\hyperlink{headers_8h_a4dec1afb3444ba3411ecd52e0daa564c}{Select\+Mode}} (ALLEGRO\+\_\+\+FONT $\ast$Base\+Font, ALLEGRO\+\_\+\+FONT $\ast$First\+Font, ALLEGRO\+\_\+\+FONT $\ast$Second\+Font, int First\+Color\mbox{[}$\,$\mbox{]}, int Title\+Color\mbox{[}$\,$\mbox{]}, int Screen\+Width, int Screen\+Hight, int Option)
+\item 
+void \mbox{\hyperlink{headers_8h_a922d6a4f9982c17a199b9e8f70113652}{Help}} (ALLEGRO\+\_\+\+FONT $\ast$First\+Font, ALLEGRO\+\_\+\+FONT $\ast$Second\+Font, int Screen\+Width, int Screen\+Height, int First\+Color\mbox{[}$\,$\mbox{]}, int Title\+Color\mbox{[}$\,$\mbox{]}, int Option)
+\item 
+void \mbox{\hyperlink{headers_8h_a08112f0ea758f85778fb58646329dc1c}{Credits}} (ALLEGRO\+\_\+\+FONT $\ast$First\+Font, ALLEGRO\+\_\+\+FONT $\ast$Second\+Font, ALLEGRO\+\_\+\+FONT $\ast$Base\+Font, int Screen\+Width, int Screen\+Height, int First\+Color\mbox{[}$\,$\mbox{]}, int Title\+Color\mbox{[}$\,$\mbox{]}, int Option)
+\item 
+float \mbox{\hyperlink{headers_8h_a7977e46545862b54ed08d4043e69bb1c}{Improve\+Ball\+Speed}} (float Current\+Speed, int Difficult\+Level)
+\item 
+float \mbox{\hyperlink{headers_8h_a80ec5de73d51522df4f66c91587f6267}{Reverse\+Ball}} (float Current\+Ball)
+\item 
+float \mbox{\hyperlink{headers_8h_aa3d0163d5c477208e963d01807e929be}{Ball\+Speed}} (float Speed)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{headers_8h_a37777aad04880fea227c1817d1dd24ce}\label{headers_8h_a37777aad04880fea227c1817d1dd24ce}} 
+\index{headers.h@{headers.h}!AllDestroy@{AllDestroy}}
+\index{AllDestroy@{AllDestroy}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{AllDestroy()}{AllDestroy()}}
+{\footnotesize\ttfamily void All\+Destroy (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE $\ast$}]{Event\+Queue,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Base\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{First\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Second\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Micro\+Font,  }\item[{ALLEGRO\+\_\+\+DISPLAY $\ast$}]{Display,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{Heart,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{Break\+Heart }\end{DoxyParamCaption})}
+
+\doxysubsection*{Destroy elements of Allegro Library}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Event\+Queue} & destroy Event Queue \\
+\hline
+{\em Base\+Font} & destroy Base font \\
+\hline
+{\em First\+Font} & destroy First Font \\
+\hline
+{\em Second\+Font} & destroy Second Font \\
+\hline
+{\em Micro\+Font} & destroy Micro Font \\
+\hline
+{\em Display} & destroy Allegro window \\
+\hline
+{\em Heart} & destroy heart bitmap \\
+\hline
+{\em Break\+Heart} & destroy break heart bitmap \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_aa3d0163d5c477208e963d01807e929be}\label{headers_8h_aa3d0163d5c477208e963d01807e929be}} 
+\index{headers.h@{headers.h}!BallSpeed@{BallSpeed}}
+\index{BallSpeed@{BallSpeed}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{BallSpeed()}{BallSpeed()}}
+{\footnotesize\ttfamily float Ball\+Speed (\begin{DoxyParamCaption}\item[{float}]{Speed }\end{DoxyParamCaption})}
+
+\doxysubsection*{Counting ball speed}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Speed} & actual speed of ball \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+speed ball 
+\end{DoxyReturn}
+\mbox{\Hypertarget{headers_8h_aa7ea3f85f577a4ce8575e7bc6812f8f0}\label{headers_8h_aa7ea3f85f577a4ce8575e7bc6812f8f0}} 
+\index{headers.h@{headers.h}!BlockCollision@{BlockCollision}}
+\index{BlockCollision@{BlockCollision}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{BlockCollision()}{BlockCollision()}}
+{\footnotesize\ttfamily bool Block\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_brick}{Brick}}}]{New\+Block\mbox{[}$\,$\mbox{]},  }\item[{int}]{Index,  }\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{Ball\+Block }\end{DoxyParamCaption})}
+
+\doxysubsection*{Implements Collision of block}
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Block\mbox{[}$\,$\mbox{]}} & values of blocks Co-\/ordinates \\
+\hline
+{\em Index} & value of actual block \\
+\hline
+{\em Ball\+Block} & sample of Ball-\/\+Block impact \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if collision happened or false if not
+\end{DoxyReturn}
+\doxysubsection*{Implements Collision of block}
+
+if coordinates of current block equals -\/100 on x(or another coordinates, but application check x and is enough) then return false, because collision not happen else set -\/100 to every coordinates of this block
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Block\mbox{[}$\,$\mbox{]}} & values of blocks Co-\/ordinates \\
+\hline
+{\em Index} & value of actual block \\
+\hline
+{\em Ball\+Block} & sample of Ball-\/\+Block impact \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if collision happened or false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{headers_8h_a0b8db31b01ace67c182a0e1596b2060b}\label{headers_8h_a0b8db31b01ace67c182a0e1596b2060b}} 
+\index{headers.h@{headers.h}!CheckCollision@{CheckCollision}}
+\index{CheckCollision@{CheckCollision}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{CheckCollision()}{CheckCollision()}}
+{\footnotesize\ttfamily bool Check\+Collision (\begin{DoxyParamCaption}\item[{int}]{BallY,  }\item[{int}]{BallX,  }\item[{bool}]{Reverse\+Ball,  }\item[{\mbox{\hyperlink{class_brick}{Brick}}}]{New\+Block\mbox{[}$\,$\mbox{]},  }\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{Ball\+Block }\end{DoxyParamCaption})}
+
+\doxysubsection*{Check what coordinates are colliding}
+
+
+\begin{DoxyParams}{Parameters}
+{\em BallY} & Ball Y position \\
+\hline
+{\em BallX} & Ball X position \\
+\hline
+{\em Reverse\+Ball} & actual side ball moves on for Reverse \\
+\hline
+{\em New\+Block\mbox{[}$\,$\mbox{]}} & increase range of Blocks \\
+\hline
+{\em Ball\+Block} & sample of Ball-\/\+Block impact \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if collision happened or false if not
+\end{DoxyReturn}
+\doxysubsection*{Check what coordinates are colliding}
+
+if ball is on block coordinates then call {\bfseries{\mbox{\hyperlink{body_8cpp_aa7ea3f85f577a4ce8575e7bc6812f8f0}{Block\+Collision()}}}} and set Reverse\+Ball depending on collision exist or not
+
+
+\begin{DoxyParams}{Parameters}
+{\em BallY} & Ball Y position \\
+\hline
+{\em BallX} & Ball X position \\
+\hline
+{\em Reverse\+Ball} & actual side ball moves on for Reverse \\
+\hline
+{\em New\+Block\mbox{[}$\,$\mbox{]}} & increase range of Blocks \\
+\hline
+{\em Ball\+Block} & sample of Ball-\/\+Block impact \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if collision happened or false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{headers_8h_a08112f0ea758f85778fb58646329dc1c}\label{headers_8h_a08112f0ea758f85778fb58646329dc1c}} 
+\index{headers.h@{headers.h}!Credits@{Credits}}
+\index{Credits@{Credits}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{Credits()}{Credits()}}
+{\footnotesize\ttfamily void Credits (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{First\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Second\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Base\+Font,  }\item[{int}]{Screen\+Width,  }\item[{int}]{Screen\+Height,  }\item[{int}]{First\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{Title\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{Option }\end{DoxyParamCaption})}
+
+\doxysubsection*{Credits State}
+
+
+\begin{DoxyParams}{Parameters}
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em Second\+Font} & function range increase of Second font \\
+\hline
+{\em Base\+Font} & function range increase of Base Font \\
+\hline
+{\em Screen\+Width} & increase range a Screen Width of window \\
+\hline
+{\em Screen\+Height} & increase range a Screen Height of window \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em Option} & store which option in main menu has been chosen\\
+\hline
+\end{DoxyParams}
+\doxysubsection*{Credits State}
+
+Draw a credits state. Authors sound and images source etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em Second\+Font} & function range increase of Second font \\
+\hline
+{\em Base\+Font} & function range increase of Base Font \\
+\hline
+{\em Screen\+Width} & increase range a Screen Width of window \\
+\hline
+{\em Screen\+Height} & increase range a Screen Height of window \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em Option} & store which option in main menu has been chosen \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_ab9de1d4e087cace00474f81924869bee}\label{headers_8h_ab9de1d4e087cace00474f81924869bee}} 
+\index{headers.h@{headers.h}!DestroySounds@{DestroySounds}}
+\index{DestroySounds@{DestroySounds}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{DestroySounds()}{DestroySounds()}}
+{\footnotesize\ttfamily void Destroy\+Sounds (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{Ball\+Block,  }\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{Wall\+Impact,  }\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{Paddle\+Impact,  }\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{Lost\+Life,  }\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{End,  }\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{Main\+Music,  }\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{Menu\+Music }\end{DoxyParamCaption})}
+
+\doxysubsection*{Destroy Allegro Samples}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ball\+Block} & destroy Ball-\/\+Block impact sample \\
+\hline
+{\em Wall\+Impact} & destroy Ball-\/\+Wall impact sample \\
+\hline
+{\em Paddle\+Impact} & destroy Ball-\/\+Paddle impact sample \\
+\hline
+{\em Lost\+Life} & destroy lost life sample \\
+\hline
+{\em End} & destroy endgame sample \\
+\hline
+{\em Main\+Music} & destroy main music sample \\
+\hline
+{\em Menu\+Music} & destroy menu music sample \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_ac03ecad132999f1d1062581ac347be9b}\label{headers_8h_ac03ecad132999f1d1062581ac347be9b}} 
+\index{headers.h@{headers.h}!DestroyTimers@{DestroyTimers}}
+\index{DestroyTimers@{DestroyTimers}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{DestroyTimers()}{DestroyTimers()}}
+{\footnotesize\ttfamily void Destroy\+Timers (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+TIMER $\ast$}]{Main\+Timer,  }\item[{ALLEGRO\+\_\+\+TIMER $\ast$}]{Ball\+One\+Impact\+Timer,  }\item[{ALLEGRO\+\_\+\+TIMER $\ast$}]{Ball\+Two\+Impact\+Timer,  }\item[{ALLEGRO\+\_\+\+TIMER $\ast$}]{Paddle\+One\+Impact\+Timer,  }\item[{ALLEGRO\+\_\+\+TIMER $\ast$}]{Paddle\+Two\+Impact\+Timer }\end{DoxyParamCaption})}
+
+\doxysubsection*{Destroy Allegro Timers}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Main\+Timer} & destroy main timer \\
+\hline
+{\em Ball\+Impact\+Timer} & destroy Ball of first player impacts timer \\
+\hline
+{\em Ball\+Two\+Impact\+Timer} & destroy Ball of second player impacts timer \\
+\hline
+{\em Paddle\+One\+Impact\+Timer} & destroy paddle of first player impacts timer \\
+\hline
+{\em Paddle\+Two\+Impact\+Timer} & destroy paddle of second player impacts timer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_a61ffca78033574a64abb885014078bf1}\label{headers_8h_a61ffca78033574a64abb885014078bf1}} 
+\index{headers.h@{headers.h}!DisplayWindow@{DisplayWindow}}
+\index{DisplayWindow@{DisplayWindow}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{DisplayWindow()}{DisplayWindow()}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+DISPLAY$\ast$ Display\+Window (\begin{DoxyParamCaption}\item[{int}]{Screen\+Width,  }\item[{int}]{Screen\+Height,  }\item[{bool}]{Full\+Screen }\end{DoxyParamCaption})}
+
+\doxysubsection*{Initialize Main Window}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Screen\+Width} & set a Screen Width of window \\
+\hline
+{\em Screen\+Height} & set a Screen Height of window \\
+\hline
+{\em Full\+Screen} & set a statement full screen or windowed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+window to display or 0
+\end{DoxyReturn}
+\doxysubsection*{Initialize Main Window}
+
+if initialization false show error statement else initialize Allegro window
+
+if Fullscreen equals true display full screen else display windowed
+
+
+\begin{DoxyParams}{Parameters}
+{\em Screen\+Width} & set a Screen Width of window \\
+\hline
+{\em Screen\+Height} & set a Screen Height of window \\
+\hline
+{\em Full\+Screen} & set a statement full screen or windowed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+window to display or 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{headers_8h_a08218ac79861d2c31d0896c92b2b4170}\label{headers_8h_a08218ac79861d2c31d0896c92b2b4170}} 
+\index{headers.h@{headers.h}!DrawBoard@{DrawBoard}}
+\index{DrawBoard@{DrawBoard}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{DrawBoard()}{DrawBoard()}}
+{\footnotesize\ttfamily void Draw\+Board (\begin{DoxyParamCaption}\item[{int}]{Screen\+Width,  }\item[{int}]{Screen\+Height,  }\item[{int}]{Title\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{First\+Color\mbox{[}$\,$\mbox{]},  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Base\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{First\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Second\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Help\+Font,  }\item[{int}]{Player\+One\+Score,  }\item[{int}]{Player\+Two\+Score,  }\item[{int}]{Player\+One\+Life,  }\item[{int}]{Player\+Two\+Life,  }\item[{float}]{Player\+One\+Speed\+Ball,  }\item[{float}]{Player\+Two\+Speed\+Ball,  }\item[{int}]{Player\+One\+Block,  }\item[{int}]{Player\+Two\+Block,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{Heart,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{Break\+Heart,  }\item[{bool}]{Exit,  }\item[{bool}]{Game\+Over,  }\item[{ALLEGRO\+\_\+\+SAMPLE $\ast$}]{Main\+Music }\end{DoxyParamCaption})}
+
+\doxysubsection*{Draw The Main Game }
+
+
+\begin{DoxyParams}{Parameters}
+{\em Screen\+Width} & function range increase a Screen Width of window \\
+\hline
+{\em Screen\+Height} & function range increase a Screen Height of window \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Base\+Font} & function range increase of Base Font \\
+\hline
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em Second\+Font} & function range increase of Second font \\
+\hline
+{\em Help\+Font} & function range increase of Micro font \\
+\hline
+{\em Player\+One\+Score} & show actual score of first player \\
+\hline
+{\em Player\+Two\+Score} & show actual score of second player \\
+\hline
+{\em Player\+One\+Life} & show actual lives of first player \\
+\hline
+{\em Player\+Two\+Life} & show actual lives of second player \\
+\hline
+{\em Player\+One\+Speed\+Ball} & show actual ball multiplier of first player \\
+\hline
+{\em Player\+Two\+Speed\+Ball} & show actual ball multiplier of second player \\
+\hline
+{\em Player\+One\+Block} & show destroyed block of first player \\
+\hline
+{\em Player\+Two\+Block} & show destroyed block of second player \\
+\hline
+{\em Heart} & range increase of heart bitmap \\
+\hline
+{\em Break\+Heart} & range increase of break heart bitmap \\
+\hline
+{\em Exit} & statement of pause (in pause we can quit the game) \\
+\hline
+{\em Game\+Over} & statement if true end game else continue game \\
+\hline
+{\em Main\+Music} & play the main music sample\\
+\hline
+\end{DoxyParams}
+\doxysubsection*{Draw The Main Game Board}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Base\+Font} & function range increase of Base Font \\
+\hline
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em Screen\+Width} & function range increase a Screen Width of window \\
+\hline
+{\em Screen\+Height} & function range increase a Screen Height of window \\
+\hline
+{\em Option} & store which option in main menu has been chosen \\
+\hline
+{\em Full\+Screen} & check which of display mode is chosen\+: Full\+Screen or Windowed \\
+\hline
+\end{DoxyParams}
+This Function draw all content of main game like\+:
+
+
+\begin{DoxyItemize}
+\item Balls 
+\item Paddles 
+\item Statistics 
+\begin{DoxyEnumerate}
+\item Lives -\/ call {\bfseries{\mbox{\hyperlink{body_8cpp_a0cbe49f7ea9549a5ba0fe1e69068ca95}{Show\+Life()}}}} 
+\item Scores 
+\item Ball Multiplier 
+\item Destroyed Blocks 
+\end{DoxyEnumerate}
+\item Blocks 
+\item All board contours 
+\item Pause State 
+\end{DoxyItemize}
+
+Function count number of lives (add points for destroyed life) and make a decision of end game. \mbox{\Hypertarget{headers_8h_a922d6a4f9982c17a199b9e8f70113652}\label{headers_8h_a922d6a4f9982c17a199b9e8f70113652}} 
+\index{headers.h@{headers.h}!Help@{Help}}
+\index{Help@{Help}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{Help()}{Help()}}
+{\footnotesize\ttfamily void Help (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{First\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Help\+Font,  }\item[{int}]{Screen\+Width,  }\item[{int}]{Screen\+Height,  }\item[{int}]{First\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{Title\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{Option }\end{DoxyParamCaption})}
+
+\doxysubsection*{Help State}
+
+
+\begin{DoxyParams}{Parameters}
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em Second\+Font} & function range increase of Second font \\
+\hline
+{\em Screen\+Width} & increase range a Screen Width of window \\
+\hline
+{\em Screen\+Height} & increase range a Screen Height of window \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em Option} & store which option in main menu has been chosen\\
+\hline
+\end{DoxyParams}
+\doxysubsection*{Help State}
+
+Draw a help state. Game rules etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em Second\+Font} & function range increase of Second font \\
+\hline
+{\em Screen\+Width} & increase range a Screen Width of window \\
+\hline
+{\em Screen\+Height} & increase range a Screen Height of window \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em Option} & store which option in main menu has been chosen \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_a7977e46545862b54ed08d4043e69bb1c}\label{headers_8h_a7977e46545862b54ed08d4043e69bb1c}} 
+\index{headers.h@{headers.h}!ImproveBallSpeed@{ImproveBallSpeed}}
+\index{ImproveBallSpeed@{ImproveBallSpeed}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{ImproveBallSpeed()}{ImproveBallSpeed()}}
+{\footnotesize\ttfamily float Improve\+Ball\+Speed (\begin{DoxyParamCaption}\item[{float}]{Current\+Speed,  }\item[{int}]{Difficult\+Level }\end{DoxyParamCaption})}
+
+\doxysubsection*{Increase ball speed}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Current\+Speed} & actual ball speed \\
+\hline
+{\em Difficult\+Level} & set difficult level thanks to this function can multiply ball speed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+multiplied ball speed
+\end{DoxyReturn}
+\doxysubsection*{Increase ball speed}
+
+if current speed of ball is bigger than 0, it means ball is going to down board. To speed up the ball, this function adds or subtracts to the 0.\+1 multiplier, and multiply by difficult Level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Current\+Speed} & actual ball speed \\
+\hline
+{\em Difficult\+Level} & set difficult level thanks to this function can multiply ball speed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+multiplied ball speed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{headers_8h_a029ad5750e06a0c4b917ff5f09986ef7}\label{headers_8h_a029ad5750e06a0c4b917ff5f09986ef7}} 
+\index{headers.h@{headers.h}!InitializeLibrary@{InitializeLibrary}}
+\index{InitializeLibrary@{InitializeLibrary}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{InitializeLibrary()}{InitializeLibrary()}}
+{\footnotesize\ttfamily int Initialize\+Library (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxysubsection*{Initialize Allegro Library}
+
+\begin{DoxyReturn}{Returns}
+always 0
+\end{DoxyReturn}
+\doxysubsection*{Initialize Allegro Library}
+
+if initialization false show error statement else initialize library
+
+
+\begin{DoxyItemize}
+\item Fonts 
+\item TTF formats for fonts 
+\item Primitives 
+\item Keyboard listeners 
+\item Audio 
+\item Codecs for Audio 
+\end{DoxyItemize}\mbox{\Hypertarget{headers_8h_a14bfe48bdd3fa3e81c9f4fdb637076a9}\label{headers_8h_a14bfe48bdd3fa3e81c9f4fdb637076a9}} 
+\index{headers.h@{headers.h}!Intro@{Intro}}
+\index{Intro@{Intro}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{Intro()}{Intro()}}
+{\footnotesize\ttfamily void Intro (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Base\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{First\+Font,  }\item[{const int}]{First\+Color\mbox{[}$\,$\mbox{]},  }\item[{const int}]{Title\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{Screen\+Width,  }\item[{int}]{Screen\+Height,  }\item[{int}]{Option,  }\item[{bool}]{Fullscreen }\end{DoxyParamCaption})}
+
+\doxysubsection*{Draw The Main Menu}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Base\+Font} & function range increase of Base Font \\
+\hline
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em Screen\+Width} & function range increase a Screen Width of window \\
+\hline
+{\em Screen\+Height} & function range increase a Screen Height of window \\
+\hline
+{\em Option} & store which option in main menu has been chosen \\
+\hline
+{\em Full\+Screen} & check which of display mode is chosen\+: Full\+Screen or Windowed\\
+\hline
+\end{DoxyParams}
+\doxysubsection*{Draw The Main Menu}
+
+Function draw a options in main menu and calls {\bfseries{\mbox{\hyperlink{body_8cpp_afe14a0514f9b13b3d8d7dd75d371f3aa}{Set()}}}} for setting pointer
+
+
+\begin{DoxyParams}{Parameters}
+{\em Base\+Font} & function range increase of Base Font \\
+\hline
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em Screen\+Width} & function range increase a Screen Width of window \\
+\hline
+{\em Screen\+Height} & function range increase a Screen Height of window \\
+\hline
+{\em Option} & store which option in main menu has been chosen \\
+\hline
+{\em Full\+Screen} & check which of display mode is chosen\+: Full\+Screen or Windowed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_ae758dbf2670414b04be3eb553b89c950}\label{headers_8h_ae758dbf2670414b04be3eb553b89c950}} 
+\index{headers.h@{headers.h}!Outro@{Outro}}
+\index{Outro@{Outro}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{Outro()}{Outro()}}
+{\footnotesize\ttfamily void Outro (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{First\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Second\+Font,  }\item[{int}]{First\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{Title\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{Screen\+Width,  }\item[{int}]{Screen\+Height,  }\item[{int}]{Option }\end{DoxyParamCaption})}
+
+\doxysubsection*{Setting Fullscreen/\+Windowed option}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Option} & store which option in main menu has been chosen \\
+\hline
+{\em Select} & if true accept the change of window displaying \\
+\hline
+{\em Display} & Allegro window\\
+\hline
+\end{DoxyParams}
+\doxysubsection*{Setting End Game State}
+
+Draw a end game state and call {\bfseries{\mbox{\hyperlink{body_8cpp_afe14a0514f9b13b3d8d7dd75d371f3aa}{Set()}}}} 
+\begin{DoxyParams}{Parameters}
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em Second\+Font} & function range increase of Second font \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Screen\+Width} & increase range a Screen Width of window \\
+\hline
+{\em Screen\+Height} & increase range a Screen Height of window \\
+\hline
+{\em Option} & store which option in main menu has been chosen \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_a80ec5de73d51522df4f66c91587f6267}\label{headers_8h_a80ec5de73d51522df4f66c91587f6267}} 
+\index{headers.h@{headers.h}!ReverseBall@{ReverseBall}}
+\index{ReverseBall@{ReverseBall}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{ReverseBall()}{ReverseBall()}}
+{\footnotesize\ttfamily float Reverse\+Ball (\begin{DoxyParamCaption}\item[{float}]{Current\+Ball }\end{DoxyParamCaption})}
+
+\doxysubsection*{Reverse ball move}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Current\+Ball} & which ball to reverse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reversed move of ball
+\end{DoxyReturn}
+\doxysubsection*{Reverse ball move}
+
+if Current\+Ball is bigger than 0, it determinant where ball is going (up/down) then reverse direction
+
+
+\begin{DoxyParams}{Parameters}
+{\em Current\+Ball} & which ball to reverse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reversed move of ball 
+\end{DoxyReturn}
+\mbox{\Hypertarget{headers_8h_a4dec1afb3444ba3411ecd52e0daa564c}\label{headers_8h_a4dec1afb3444ba3411ecd52e0daa564c}} 
+\index{headers.h@{headers.h}!SelectMode@{SelectMode}}
+\index{SelectMode@{SelectMode}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{SelectMode()}{SelectMode()}}
+{\footnotesize\ttfamily void Select\+Mode (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Base\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{First\+Font,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{Second\+Font,  }\item[{int}]{First\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{Title\+Color\mbox{[}$\,$\mbox{]},  }\item[{int}]{Screen\+Width,  }\item[{int}]{Screen\+Height,  }\item[{int}]{Option }\end{DoxyParamCaption})}
+
+\doxysubsection*{Select Game Mode State}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Base\+Font} & function range increase of Second font \\
+\hline
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em Second\+Font} & function range increase of Second font \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Screen\+Width} & increase range a Screen Width of window \\
+\hline
+{\em Screen\+Height} & increase range a Screen Height of window \\
+\hline
+{\em Option} & store which option in main menu has been chosen\\
+\hline
+\end{DoxyParams}
+\doxysubsection*{Select Game Mode State}
+
+Draw a Select game state mode and call {\bfseries{\mbox{\hyperlink{body_8cpp_afe14a0514f9b13b3d8d7dd75d371f3aa}{Set()}}}} for setting a pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Base\+Font} & function range increase of Second font \\
+\hline
+{\em First\+Font} & function range increase of First font \\
+\hline
+{\em Second\+Font} & function range increase of Second font \\
+\hline
+{\em Title\+Color} & function range increase of Title Color \\
+\hline
+{\em First\+Color} & function range increase of First Color \\
+\hline
+{\em Screen\+Width} & increase range a Screen Width of window \\
+\hline
+{\em Screen\+Height} & increase range a Screen Height of window \\
+\hline
+{\em Option} & store which option in main menu has been chosen \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_afe14a0514f9b13b3d8d7dd75d371f3aa}\label{headers_8h_afe14a0514f9b13b3d8d7dd75d371f3aa}} 
+\index{headers.h@{headers.h}!Set@{Set}}
+\index{Set@{Set}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily void Set (\begin{DoxyParamCaption}\item[{int}]{Option,  }\item[{int}]{Screen\+Height,  }\item[{int}]{Screen\+Width }\end{DoxyParamCaption})}
+
+\doxysubsection*{Set the menu pointer}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Screen\+Width} & increase range a Screen Width of window \\
+\hline
+{\em Screen\+Height} & increase range a Screen Height of window \\
+\hline
+{\em Option} & store which option in main menu has been chosen\\
+\hline
+\end{DoxyParams}
+\doxysubsection*{Set the menu pointer}
+
+draw a pointer (circle primitive) where the option is currently set 
+
+\doxysubparagraph*{If statement}
+
+
+\begin{DoxyItemize}
+\item if Option equals 1 then pointer is on \char`\"{}\+Start Game\char`\"{} 
+\item if Option equals 2 then pointer is on \char`\"{}\+Set Fullscreen/\+Windowed\char`\"{} 
+\item if Option equals 3 then pointer is on \char`\"{}\+How to play?\char`\"{} 
+\item if Option equals 4 then pointer is on \char`\"{}\+Credits\char`\"{} 
+\item if Option equals 5 then pointer is on \char`\"{}\+Quit Game\char`\"{} 
+\item if Option equals 6 then pointer is on \char`\"{}\+Easy Mode\char`\"{} in select state 
+\item if Option equals 7 then pointer is on \char`\"{}\+Medium Mode\char`\"{} in select state 
+\item if Option equals 8 then pointer is on \char`\"{}\+Hard Mode\char`\"{} in select state 
+\item if Option equals 9 then pointer is on \char`\"{}\+Versus Mode\char`\"{} in select state 
+\item if Option equals 10 then pointer is on \char`\"{}\+Back to Menu\char`\"{} in Help state/\+Credits state 
+\item if Option equals 11 then pointer is on \char`\"{}\+No!\char`\"{} in endgame state 
+\item if Option equals 12 then pointer is on \char`\"{}\+Yes!\char`\"{} in endgame state 
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em Screen\+Width} & increase range a Screen Width of window \\
+\hline
+{\em Screen\+Height} & increase range a Screen Height of window \\
+\hline
+{\em Option} & store which option in main menu has been chosen \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_a0cbe49f7ea9549a5ba0fe1e69068ca95}\label{headers_8h_a0cbe49f7ea9549a5ba0fe1e69068ca95}} 
+\index{headers.h@{headers.h}!ShowLife@{ShowLife}}
+\index{ShowLife@{ShowLife}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{ShowLife()}{ShowLife()}}
+{\footnotesize\ttfamily void Show\+Life (\begin{DoxyParamCaption}\item[{int}]{Player\+One\+Life,  }\item[{int}]{Player\+Two\+Life,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{Heart,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{Break\+Heart }\end{DoxyParamCaption})}
+
+\doxysubsection*{Show players lives}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Player\+One\+Life} & show actual lives of first player \\
+\hline
+{\em Player\+Two\+Life} & show actual lives of second player \\
+\hline
+{\em Heart} & range increase of heart bitmap \\
+\hline
+{\em Break\+Heart} & range increase of break heart bitmap\\
+\hline
+\end{DoxyParams}
+\doxysubsection*{Show players lives}
+
+Draw a number of lives depend on how many lives player have
+
+
+\begin{DoxyParams}{Parameters}
+{\em Player\+One\+Life} & show actual lives of first player \\
+\hline
+{\em Player\+Two\+Life} & show actual lives of second player \\
+\hline
+{\em Heart} & range increase of heart bitmap \\
+\hline
+{\em Break\+Heart} & range increase of break heart bitmap \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{headers_8h_a90014b4647cbb3b1935140c8ebb542b1}\label{headers_8h_a90014b4647cbb3b1935140c8ebb542b1}} 
+\index{headers.h@{headers.h}!Stealth@{Stealth}}
+\index{Stealth@{Stealth}!headers.h@{headers.h}}
+\doxysubsubsection{\texorpdfstring{Stealth()}{Stealth()}}
+{\footnotesize\ttfamily void Stealth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxysubsection*{Hide a console window}

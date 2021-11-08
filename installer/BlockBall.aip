@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="18.1.1" version="18.1.1" Modules="professional" RootPath="." Language="en" Id="{566B2BCE-A35D-4D60-B676-A6BD865DBCF6}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_CURRENT_YEAR" Value="2021" ValueLocId="-"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPNOMODIFY" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPNOREPAIR" Value="1" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPPRODUCTICON" Value="BlockBall.exe" Type="8"/>
+    <ROW Property="Manufacturer" Value="WEAiI"/>
+    <ROW Property="ProductCode" Value="1031:{F5C92998-33EC-4DB8-A739-CD48E39E2DE4} 1033:{F5C92998-33EC-4DB8-A739-CD48E39E2DE4} 1045:{F5C92998-33EC-4DB8-A739-CD48E39E2DE4} 1049:{F5C92998-33EC-4DB8-A739-CD48E39E2DE4} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="BlockBall"/>
+    <ROW Property="ProductVersion" Value="2.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{82FB6A21-F67C-43C4-9C68-29300B3738D3}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Debug_1_Dir" Directory_Parent="obj_Dir" DefaultDir="Debug"/>
+    <ROW Directory="Debug_Dir" Directory_Parent="bin_Dir" DefaultDir="Debug"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="bin_Dir" Directory_Parent="APPDIR" DefaultDir="bin"/>
+    <ROW Directory="data_Dir" Directory_Parent="APPDIR" DefaultDir="data"/>
+    <ROW Directory="fonts_Dir" Directory_Parent="APPDIR" DefaultDir="fonts"/>
+    <ROW Directory="html_1_Dir" Directory_Parent="latex_Dir" DefaultDir="html"/>
+    <ROW Directory="html_Dir" Directory_Parent="APPDIR" DefaultDir="html"/>
+    <ROW Directory="img_Dir" Directory_Parent="APPDIR" DefaultDir="img"/>
+    <ROW Directory="latex_1_Dir" Directory_Parent="latex_Dir" DefaultDir="latex"/>
+    <ROW Directory="latex_Dir" Directory_Parent="APPDIR" DefaultDir="latex"/>
+    <ROW Directory="obj_Dir" Directory_Parent="APPDIR" DefaultDir="obj"/>
+    <ROW Directory="search_1_Dir" Directory_Parent="html_1_Dir" DefaultDir="search"/>
+    <ROW Directory="search_Dir" Directory_Parent="html_Dir" DefaultDir="search"/>
+    <ROW Directory="sounds_Dir" Directory_Parent="APPDIR" DefaultDir="sounds"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_ExePath" ComponentId="{9E049D0A-4496-48EC-B4B2-456A64C55FD1}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="APPDIR" ComponentId="{98E6ED39-5FEF-43C1-80D0-E5A8404F1738}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="BlockBall.ico" ComponentId="{AD961DCB-995E-4E7F-A40D-A7469FAF94DB}" Directory_="img_Dir" Attributes="0" KeyPath="BlockBall.ico_1" Type="0"/>
+    <ROW Component="BlockBall.ico_1" ComponentId="{D7F91482-EC33-45C5-A161-168E5F87D268}" Directory_="latex_1_Dir" Attributes="0" KeyPath="BlockBall.ico_4" Type="0"/>
+    <ROW Component="Block_Impact.wav" ComponentId="{25A20A1D-398B-4395-B46A-AC1290EBA527}" Directory_="sounds_Dir" Attributes="0" KeyPath="Block_Impact.wav" Type="0"/>
+    <ROW Component="Blockball.exe" ComponentId="{143CE1BC-9D07-4B53-83E3-2078343360FE}" Directory_="Debug_Dir" Attributes="0" KeyPath="Blockball.exe"/>
+    <ROW Component="Blockball.exe_1" ComponentId="{83CCBCBF-99C8-4441-A922-016575D634F5}" Directory_="APPDIR" Attributes="0" KeyPath="Blockball.exe_1"/>
+    <ROW Component="EasyModeSave.txt" ComponentId="{3A2A9226-5A74-493A-B2B7-77AECFAF038B}" Directory_="data_Dir" Attributes="0" KeyPath="EasyModeSave.txt" Type="0"/>
+    <ROW Component="Gameplay.ttf" ComponentId="{D37BBEF9-04C1-4EBC-A470-ACCC82EA28E1}" Directory_="fonts_Dir" Attributes="0" Type="0"/>
+    <ROW Component="ProductInformation" ComponentId="{775E7B36-230C-489E-9D14-9FF3317E8986}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{090D187B-B5B0-423B-B823-C214AEFB7562}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="all_0.html" ComponentId="{F9CC633D-2A71-4D26-BB9F-932794BCCACB}" Directory_="search_Dir" Attributes="0" KeyPath="all_0.html" Type="0"/>
+    <ROW Component="allegro.log" ComponentId="{57106978-F44B-4650-99A5-D92816281B99}" Directory_="APPDIR" Attributes="0" KeyPath="allegro.log" Type="0"/>
+    <ROW Component="allegro5.0.10md.dll" ComponentId="{073970F9-8C89-41E2-8C8F-976008AAD734}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro5.0.10md.dll"/>
+    <ROW Component="allegro5.0.10mddebug.dll" ComponentId="{559263DF-295F-4A22-AF25-AECFC99FCC99}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro5.0.10mddebug.dll"/>
+    <ROW Component="allegro5.0.10monolithmd.dll" ComponentId="{27A8E29F-5E43-4293-90E7-BA13B58F1787}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro5.0.10monolithmd.dll"/>
+    <ROW Component="allegro5.0.10monolithmddebug.dll" ComponentId="{CAFF102E-965B-41BA-A67D-FA7DFC3C7457}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro5.0.10monolithmddebug.dll"/>
+    <ROW Component="allegro5.0.10monolithmt.dll" ComponentId="{BC22AEA2-2350-4D43-838A-F71FB1556E14}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro5.0.10monolithmt.dll"/>
+    <ROW Component="allegro5.0.10monolithmtdebug.dll" ComponentId="{625011F7-7342-4BDB-A300-43CB7A57A480}" Directory_="APPDIR" Attributes="0" KeyPath="allegro5.0.10monolithmtdebug.dll"/>
+    <ROW Component="allegro5.0.10monolithmtdebug.dll_1" ComponentId="{9D0EDFBE-0E79-4DAB-9AAC-F3E3123B078D}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro5.0.10monolithmtdebug.dll_1"/>
+    <ROW Component="allegro5.0.10mt.dll" ComponentId="{0DE5C955-42B2-466F-A92C-7694EBA63F55}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro5.0.10mt.dll"/>
+    <ROW Component="allegro5.0.10mtdebug.dll" ComponentId="{F01F5178-FD85-496C-8563-F6B8AFCF3FBC}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_acodec5.0.10md.dll" ComponentId="{C17D6ABB-4AFF-4133-827F-E8C0478B503E}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_acodec5.0.10md.dll"/>
+    <ROW Component="allegro_acodec5.0.10mddebug.dll" ComponentId="{FFD49047-5C97-43F6-B46F-DC714A94002C}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_acodec5.0.10mddebug.dll"/>
+    <ROW Component="allegro_acodec5.0.10mt.dll" ComponentId="{411419F4-9DC0-4574-AB44-D83A9EE300CB}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_acodec5.0.10mt.dll"/>
+    <ROW Component="allegro_acodec5.0.10mtdebug.dll" ComponentId="{27C4B825-3A78-4FAC-912B-F877C025CBE5}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_acodec5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_audio5.0.10md.dll" ComponentId="{B51E71A6-50A2-4FB2-96C4-FEF624A8CB0F}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_audio5.0.10md.dll"/>
+    <ROW Component="allegro_audio5.0.10mddebug.dll" ComponentId="{A04FB0AC-C544-4757-9A5F-4C28D6FE08FF}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_audio5.0.10mddebug.dll"/>
+    <ROW Component="allegro_audio5.0.10mt.dll" ComponentId="{5FA5318C-9C11-41FF-BFED-9B10282C1CB5}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_audio5.0.10mt.dll"/>
+    <ROW Component="allegro_audio5.0.10mtdebug.dll" ComponentId="{C16F771D-DF0B-4BEA-A46F-E9A709E6598C}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_audio5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_color5.0.10md.dll" ComponentId="{285062AA-3513-4D3A-A5FC-ED463B9534B4}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_color5.0.10md.dll"/>
+    <ROW Component="allegro_color5.0.10mddebug.dll" ComponentId="{55266BDB-DBB5-4847-8522-3F5A76B52350}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_color5.0.10mddebug.dll"/>
+    <ROW Component="allegro_color5.0.10mt.dll" ComponentId="{5E83416F-2F04-4E37-B72E-A26E1CE90885}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_color5.0.10mt.dll"/>
+    <ROW Component="allegro_color5.0.10mtdebug.dll" ComponentId="{26FA69C1-5883-4CFB-9BDA-9BF93DEC8F34}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_color5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_dialog5.0.10md.dll" ComponentId="{39760451-A1D6-4CA3-9211-39F17B79FECA}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_dialog5.0.10md.dll"/>
+    <ROW Component="allegro_dialog5.0.10mddebug.dll" ComponentId="{50B17441-0DFD-4934-808B-86A594A8FE36}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_dialog5.0.10mddebug.dll"/>
+    <ROW Component="allegro_dialog5.0.10mt.dll" ComponentId="{D62CCA8E-0831-4302-9C7F-B109209767EF}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_dialog5.0.10mt.dll"/>
+    <ROW Component="allegro_dialog5.0.10mtdebug.dll" ComponentId="{1EF2F3F0-C681-4ADF-93E4-9E97DCEC3D81}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_dialog5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_font5.0.10md.dll" ComponentId="{27503A25-3979-47F3-86B4-D48573E1C0DA}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_font5.0.10md.dll"/>
+    <ROW Component="allegro_font5.0.10mddebug.dll" ComponentId="{9DA3C5FA-2162-40A8-A329-6B417A0B715F}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_font5.0.10mddebug.dll"/>
+    <ROW Component="allegro_font5.0.10mt.dll" ComponentId="{188B724F-CBDF-433B-BC7D-85DC4D0FD408}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_font5.0.10mt.dll"/>
+    <ROW Component="allegro_font5.0.10mtdebug.dll" ComponentId="{9522D695-1EA9-4199-A54C-1F375AC9250C}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_font5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_image5.0.10md.dll" ComponentId="{ED0ADA7D-9389-48F7-96D9-10FC0CBE53FC}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_image5.0.10md.dll"/>
+    <ROW Component="allegro_image5.0.10mddebug.dll" ComponentId="{0D96A5B8-830A-40FE-9B47-81C21E98D9DE}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_image5.0.10mddebug.dll"/>
+    <ROW Component="allegro_image5.0.10mt.dll" ComponentId="{C6196B11-5766-4771-82CF-E1F7F17D356B}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_image5.0.10mt.dll"/>
+    <ROW Component="allegro_image5.0.10mtdebug.dll" ComponentId="{A7211DBB-D8E2-4CA5-AFF9-83C32E6C210F}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_image5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_memfile5.0.10md.dll" ComponentId="{D872E19C-A331-4FB6-A598-1C0726F8A68C}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_memfile5.0.10md.dll"/>
+    <ROW Component="allegro_memfile5.0.10mddebug.dll" ComponentId="{4F691636-B35D-4562-8C64-4A013484A8FD}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_memfile5.0.10mddebug.dll"/>
+    <ROW Component="allegro_memfile5.0.10mt.dll" ComponentId="{80169B10-26A7-4200-BB6F-BEE988F8DCF9}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_memfile5.0.10mt.dll"/>
+    <ROW Component="allegro_memfile5.0.10mtdebug.dll" ComponentId="{1BC1E758-5EE9-4D7D-A929-90D4EA0D0433}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_memfile5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_physfs5.0.10md.dll" ComponentId="{BF722A9E-48A0-43CD-BDFA-9710EEA5EA4D}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_physfs5.0.10md.dll"/>
+    <ROW Component="allegro_physfs5.0.10mddebug.dll" ComponentId="{D76525CD-81DF-4F15-B1E9-27824E8ADEAB}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_physfs5.0.10mddebug.dll"/>
+    <ROW Component="allegro_physfs5.0.10mt.dll" ComponentId="{377EF32A-E83D-4CEB-8A06-3892F1A9AA72}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_physfs5.0.10mt.dll"/>
+    <ROW Component="allegro_physfs5.0.10mtdebug.dll" ComponentId="{F4863137-2221-4DAE-974A-474AD1B3CB88}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_physfs5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_primitives5.0.10md.dll" ComponentId="{26D683D1-1BDF-47EA-B3BC-23BA2D92A921}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_primitives5.0.10md.dll"/>
+    <ROW Component="allegro_primitives5.0.10mddebug.dll" ComponentId="{A851901C-72C4-4B89-A053-6548B7528BB6}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_primitives5.0.10mddebug.dll"/>
+    <ROW Component="allegro_primitives5.0.10mt.dll" ComponentId="{853E9825-9A3F-4DCD-81A7-A3D8736D4E2A}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_primitives5.0.10mt.dll"/>
+    <ROW Component="allegro_primitives5.0.10mtdebug.dll" ComponentId="{0C01F69B-A3AD-418F-836A-93BDD78A27F9}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_primitives5.0.10mtdebug.dll"/>
+    <ROW Component="allegro_ttf5.0.10md.dll" ComponentId="{F1839DFB-5090-40F0-95C7-C26ED3AE001F}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_ttf5.0.10md.dll"/>
+    <ROW Component="allegro_ttf5.0.10mddebug.dll" ComponentId="{BB703A34-D312-431E-B281-6B1BB4A05834}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_ttf5.0.10mddebug.dll"/>
+    <ROW Component="allegro_ttf5.0.10mt.dll" ComponentId="{F13116FA-6B5A-4E29-B92B-FB25F918FD5C}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_ttf5.0.10mt.dll"/>
+    <ROW Component="allegro_ttf5.0.10mtdebug.dll" ComponentId="{9BEBB713-5B67-4855-9AA5-C7DD61847E34}" Directory_="bin_Dir" Attributes="0" KeyPath="allegro_ttf5.0.10mtdebug.dll"/>
+    <ROW Component="annotated.html" ComponentId="{7F15510B-C79B-41F2-B026-5996204880DD}" Directory_="html_Dir" Attributes="0" KeyPath="annotated.html" Type="0"/>
+    <ROW Component="annotated.tex" ComponentId="{6AE1A3BC-51AE-4AEE-896C-8497D3D8F942}" Directory_="latex_Dir" Attributes="0" KeyPath="annotated.tex" Type="0"/>
+    <ROW Component="bc_s.png" ComponentId="{10F48FFE-387F-4736-A783-EE2145E29BBF}" Directory_="html_1_Dir" Attributes="0" KeyPath="bc_s.png_1" Type="0"/>
+    <ROW Component="body.o" ComponentId="{E8DB0C63-AEBB-4359-A14C-7904EC7618D8}" Directory_="Debug_1_Dir" Attributes="0" KeyPath="body.o" Type="0"/>
+    <ROW Component="close.svg" ComponentId="{12C0255C-034E-4749-93D1-F8E2AF67EA6D}" Directory_="search_1_Dir" Attributes="0" KeyPath="close.svg_1" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="allegro5.0.10monolithmtdebug.dll" Component_="allegro5.0.10monolithmtdebug.dll" FileName="ALLEGR~1.DLL|allegro-5.0.10-monolith-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\allegro-5.0.10-monolith-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro.log" Component_="allegro.log" FileName="allegro.log" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\allegro.log" SelfReg="false"/>
+    <ROW File="allegro5.0.10mddebug.dll" Component_="allegro5.0.10mddebug.dll" FileName="ALLEGR~1.DLL|allegro-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro5.0.10md.dll" Component_="allegro5.0.10md.dll" FileName="ALLEGR~2.DLL|allegro-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro5.0.10monolithmddebug.dll" Component_="allegro5.0.10monolithmddebug.dll" FileName="ALLEGR~3.DLL|allegro-5.0.10-monolith-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro-5.0.10-monolith-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro5.0.10monolithmd.dll" Component_="allegro5.0.10monolithmd.dll" FileName="ALLEGR~4.DLL|allegro-5.0.10-monolith-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro-5.0.10-monolith-md.dll" SelfReg="false"/>
+    <ROW File="allegro5.0.10monolithmtdebug.dll_1" Component_="allegro5.0.10monolithmtdebug.dll_1" FileName="ALLEGR~5.DLL|allegro-5.0.10-monolith-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro-5.0.10-monolith-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro5.0.10monolithmt.dll" Component_="allegro5.0.10monolithmt.dll" FileName="ALLEGR~6.DLL|allegro-5.0.10-monolith-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro-5.0.10-monolith-mt.dll" SelfReg="false"/>
+    <ROW File="allegro5.0.10mtdebug.dll" Component_="allegro5.0.10mtdebug.dll" FileName="ALLEGR~7.DLL|allegro-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro5.0.10mt.dll" Component_="allegro5.0.10mt.dll" FileName="ALLEGR~8.DLL|allegro-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_acodec5.0.10mddebug.dll" Component_="allegro_acodec5.0.10mddebug.dll" FileName="ALLEGR~9.DLL|allegro_acodec-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_acodec-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_acodec5.0.10md.dll" Component_="allegro_acodec5.0.10md.dll" FileName="ALLEG~10.DLL|allegro_acodec-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_acodec-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_acodec5.0.10mtdebug.dll" Component_="allegro_acodec5.0.10mtdebug.dll" FileName="ALLEG~11.DLL|allegro_acodec-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_acodec-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_acodec5.0.10mt.dll" Component_="allegro_acodec5.0.10mt.dll" FileName="ALLEG~12.DLL|allegro_acodec-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_acodec-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_audio5.0.10mddebug.dll" Component_="allegro_audio5.0.10mddebug.dll" FileName="ALLEG~13.DLL|allegro_audio-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_audio-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_audio5.0.10md.dll" Component_="allegro_audio5.0.10md.dll" FileName="ALLEG~14.DLL|allegro_audio-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_audio-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_audio5.0.10mtdebug.dll" Component_="allegro_audio5.0.10mtdebug.dll" FileName="ALLEG~15.DLL|allegro_audio-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_audio-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_audio5.0.10mt.dll" Component_="allegro_audio5.0.10mt.dll" FileName="ALLEG~16.DLL|allegro_audio-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_audio-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_color5.0.10mddebug.dll" Component_="allegro_color5.0.10mddebug.dll" FileName="ALLEG~17.DLL|allegro_color-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_color-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_color5.0.10md.dll" Component_="allegro_color5.0.10md.dll" FileName="ALLEG~18.DLL|allegro_color-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_color-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_color5.0.10mtdebug.dll" Component_="allegro_color5.0.10mtdebug.dll" FileName="ALLEG~19.DLL|allegro_color-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_color-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_color5.0.10mt.dll" Component_="allegro_color5.0.10mt.dll" FileName="ALLEG~20.DLL|allegro_color-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_color-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_dialog5.0.10mddebug.dll" Component_="allegro_dialog5.0.10mddebug.dll" FileName="ALLEG~21.DLL|allegro_dialog-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_dialog-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_dialog5.0.10md.dll" Component_="allegro_dialog5.0.10md.dll" FileName="ALLEG~22.DLL|allegro_dialog-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_dialog-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_dialog5.0.10mtdebug.dll" Component_="allegro_dialog5.0.10mtdebug.dll" FileName="ALLEG~23.DLL|allegro_dialog-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_dialog-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_dialog5.0.10mt.dll" Component_="allegro_dialog5.0.10mt.dll" FileName="ALLEG~24.DLL|allegro_dialog-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_dialog-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_font5.0.10mddebug.dll" Component_="allegro_font5.0.10mddebug.dll" FileName="ALLEG~25.DLL|allegro_font-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_font-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_font5.0.10md.dll" Component_="allegro_font5.0.10md.dll" FileName="ALLEG~26.DLL|allegro_font-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_font-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_font5.0.10mtdebug.dll" Component_="allegro_font5.0.10mtdebug.dll" FileName="ALLEG~27.DLL|allegro_font-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_font-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_font5.0.10mt.dll" Component_="allegro_font5.0.10mt.dll" FileName="ALLEG~28.DLL|allegro_font-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_font-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_image5.0.10mddebug.dll" Component_="allegro_image5.0.10mddebug.dll" FileName="ALLEG~29.DLL|allegro_image-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_image-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_image5.0.10md.dll" Component_="allegro_image5.0.10md.dll" FileName="ALLEG~30.DLL|allegro_image-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_image-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_image5.0.10mtdebug.dll" Component_="allegro_image5.0.10mtdebug.dll" FileName="ALLEG~31.DLL|allegro_image-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_image-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_image5.0.10mt.dll" Component_="allegro_image5.0.10mt.dll" FileName="ALLEG~32.DLL|allegro_image-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_image-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_memfile5.0.10mddebug.dll" Component_="allegro_memfile5.0.10mddebug.dll" FileName="ALLEG~33.DLL|allegro_memfile-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_memfile-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_memfile5.0.10md.dll" Component_="allegro_memfile5.0.10md.dll" FileName="ALLEG~34.DLL|allegro_memfile-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_memfile-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_memfile5.0.10mtdebug.dll" Component_="allegro_memfile5.0.10mtdebug.dll" FileName="ALLEG~35.DLL|allegro_memfile-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_memfile-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_memfile5.0.10mt.dll" Component_="allegro_memfile5.0.10mt.dll" FileName="ALLEG~36.DLL|allegro_memfile-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_memfile-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_physfs5.0.10mddebug.dll" Component_="allegro_physfs5.0.10mddebug.dll" FileName="ALLEG~37.DLL|allegro_physfs-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_physfs-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_physfs5.0.10md.dll" Component_="allegro_physfs5.0.10md.dll" FileName="ALLEG~38.DLL|allegro_physfs-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_physfs-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_physfs5.0.10mtdebug.dll" Component_="allegro_physfs5.0.10mtdebug.dll" FileName="ALLEG~39.DLL|allegro_physfs-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_physfs-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_physfs5.0.10mt.dll" Component_="allegro_physfs5.0.10mt.dll" FileName="ALLEG~40.DLL|allegro_physfs-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_physfs-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_primitives5.0.10mddebug.dll" Component_="allegro_primitives5.0.10mddebug.dll" FileName="ALLEG~41.DLL|allegro_primitives-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_primitives-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_primitives5.0.10md.dll" Component_="allegro_primitives5.0.10md.dll" FileName="ALLEG~42.DLL|allegro_primitives-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_primitives-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_primitives5.0.10mtdebug.dll" Component_="allegro_primitives5.0.10mtdebug.dll" FileName="ALLEG~43.DLL|allegro_primitives-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_primitives-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_primitives5.0.10mt.dll" Component_="allegro_primitives5.0.10mt.dll" FileName="ALLEG~44.DLL|allegro_primitives-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_primitives-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="allegro_ttf5.0.10mddebug.dll" Component_="allegro_ttf5.0.10mddebug.dll" FileName="ALLEG~45.DLL|allegro_ttf-5.0.10-md-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_ttf-5.0.10-md-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_ttf5.0.10md.dll" Component_="allegro_ttf5.0.10md.dll" FileName="ALLEG~46.DLL|allegro_ttf-5.0.10-md.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_ttf-5.0.10-md.dll" SelfReg="false"/>
+    <ROW File="allegro_ttf5.0.10mtdebug.dll" Component_="allegro_ttf5.0.10mtdebug.dll" FileName="ALLEG~47.DLL|allegro_ttf-5.0.10-mt-debug.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_ttf-5.0.10-mt-debug.dll" SelfReg="false"/>
+    <ROW File="allegro_ttf5.0.10mt.dll" Component_="allegro_ttf5.0.10mt.dll" FileName="ALLEG~48.DLL|allegro_ttf-5.0.10-mt.dll" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\allegro_ttf-5.0.10-mt.dll" SelfReg="false"/>
+    <ROW File="Blockball.exe" Component_="Blockball.exe" FileName="BLOCKB~1.EXE|Blockball.exe" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\bin\Debug\Blockball.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="Blockball.cbp" Component_="allegro.log" FileName="BLOCKB~1.CBP|Blockball.cbp" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\Blockball.cbp" SelfReg="false"/>
+    <ROW File="Blockball.depend" Component_="allegro.log" FileName="BLOCKB~1.DEP|Blockball.depend" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\Blockball.depend" SelfReg="false"/>
+    <ROW File="Blockball.exe_1" Component_="Blockball.exe_1" FileName="BLOCKB~1.EXE|Blockball.exe" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\Blockball.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="Blockball.layout" Component_="allegro.log" FileName="BLOCKB~1.LAY|Blockball.layout" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\Blockball.layout" SelfReg="false"/>
+    <ROW File="body.cpp" Component_="allegro.log" FileName="body.cpp" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\body.cpp" SelfReg="false"/>
+    <ROW File="EasyModeSave.txt" Component_="EasyModeSave.txt" FileName="EASYMO~1.TXT|EasyModeSave.txt" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\data\EasyModeSave.txt" SelfReg="false"/>
+    <ROW File="HardModeSave.txt" Component_="EasyModeSave.txt" FileName="HARDMO~1.TXT|HardModeSave.txt" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\data\HardModeSave.txt" SelfReg="false"/>
+    <ROW File="MediumModeSave.txt" Component_="EasyModeSave.txt" FileName="MEDIUM~1.TXT|MediumModeSave.txt" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\data\MediumModeSave.txt" SelfReg="false"/>
+    <ROW File="template.txt" Component_="EasyModeSave.txt" FileName="template.txt" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\data\template.txt" SelfReg="false"/>
+    <ROW File="VersusModeSave.txt" Component_="EasyModeSave.txt" FileName="VERSUS~1.TXT|VersusModeSave.txt" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\data\VersusModeSave.txt" SelfReg="false"/>
+    <ROW File="Doxyfile" Component_="allegro.log" FileName="Doxyfile" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\Doxyfile" SelfReg="false"/>
+    <ROW File="Gameplay.ttf" Component_="Gameplay.ttf" FileName="Gameplay.ttf" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\fonts\Gameplay.ttf" SelfReg="false"/>
+    <ROW File="Nozty.ttf" Component_="Gameplay.ttf" FileName="Nozty.ttf" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\fonts\Nozty.ttf" SelfReg="false"/>
+    <ROW File="Quantify.ttf" Component_="Gameplay.ttf" FileName="Quantify.ttf" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\fonts\Quantify.ttf" SelfReg="false"/>
+    <ROW File="headers.h" Component_="allegro.log" FileName="headers.h" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\headers.h" SelfReg="false"/>
+    <ROW File="annotated.html" Component_="annotated.html" FileName="ANNOTA~1.HTM|annotated.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\annotated.html" SelfReg="false"/>
+    <ROW File="bc_s.png" Component_="annotated.html" FileName="bc_s.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\bc_s.png" SelfReg="false"/>
+    <ROW File="bdwn.png" Component_="annotated.html" FileName="bdwn.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\bdwn.png" SelfReg="false"/>
+    <ROW File="BlockBall.ico" Component_="annotated.html" FileName="BLOCKB~1.ICO|BlockBall.ico" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\BlockBall.ico" SelfReg="false"/>
+    <ROW File="body_8cpp.html" Component_="annotated.html" FileName="BODY_8~1.HTM|body_8cpp.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\body_8cpp.html" SelfReg="false"/>
+    <ROW File="classes.html" Component_="annotated.html" FileName="CLASSE~1.HTM|classes.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\classes.html" SelfReg="false"/>
+    <ROW File="class_brickmembers.html" Component_="annotated.html" FileName="CLASS_~1.HTM|class_brick-members.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\class_brick-members.html" SelfReg="false"/>
+    <ROW File="class_brick.html" Component_="annotated.html" FileName="CLASS_~2.HTM|class_brick.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\class_brick.html" SelfReg="false"/>
+    <ROW File="closed.png" Component_="annotated.html" FileName="closed.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\closed.png" SelfReg="false"/>
+    <ROW File="doc.png" Component_="annotated.html" FileName="doc.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\doc.png" SelfReg="false"/>
+    <ROW File="doxygen.css" Component_="annotated.html" FileName="doxygen.css" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\doxygen.css" SelfReg="false"/>
+    <ROW File="doxygen.svg" Component_="annotated.html" FileName="doxygen.svg" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\doxygen.svg" SelfReg="false"/>
+    <ROW File="dynsections.js" Component_="annotated.html" FileName="DYNSEC~1.JS|dynsections.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\dynsections.js" SelfReg="false"/>
+    <ROW File="files.html" Component_="annotated.html" FileName="FILES~1.HTM|files.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\files.html" SelfReg="false"/>
+    <ROW File="folderclosed.png" Component_="annotated.html" FileName="FOLDER~1.PNG|folderclosed.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\folderclosed.png" SelfReg="false"/>
+    <ROW File="folderopen.png" Component_="annotated.html" FileName="FOLDER~2.PNG|folderopen.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\folderopen.png" SelfReg="false"/>
+    <ROW File="functions.html" Component_="annotated.html" FileName="FUNCTI~1.HTM|functions.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\functions.html" SelfReg="false"/>
+    <ROW File="functions_vars.html" Component_="annotated.html" FileName="FUNCTI~2.HTM|functions_vars.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\functions_vars.html" SelfReg="false"/>
+    <ROW File="globals.html" Component_="annotated.html" FileName="GLOBAL~1.HTM|globals.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\globals.html" SelfReg="false"/>
+    <ROW File="globals_func.html" Component_="annotated.html" FileName="GLOBAL~2.HTM|globals_func.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\globals_func.html" SelfReg="false"/>
+    <ROW File="headers_8h.html" Component_="annotated.html" FileName="HEADER~1.HTM|headers_8h.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\headers_8h.html" SelfReg="false"/>
+    <ROW File="headers_8h_source.html" Component_="annotated.html" FileName="HEADER~2.HTM|headers_8h_source.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\headers_8h_source.html" SelfReg="false"/>
+    <ROW File="index.html" Component_="annotated.html" FileName="INDEX~1.HTM|index.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\index.html" SelfReg="false"/>
+    <ROW File="jquery.js" Component_="annotated.html" FileName="jquery.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\jquery.js" SelfReg="false"/>
+    <ROW File="main_8cpp.html" Component_="annotated.html" FileName="MAIN_8~1.HTM|main_8cpp.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\main_8cpp.html" SelfReg="false"/>
+    <ROW File="menu.js" Component_="annotated.html" FileName="menu.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\menu.js" SelfReg="false"/>
+    <ROW File="menudata.js" Component_="annotated.html" FileName="menudata.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\menudata.js" SelfReg="false"/>
+    <ROW File="nav_f.png" Component_="annotated.html" FileName="nav_f.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\nav_f.png" SelfReg="false"/>
+    <ROW File="nav_g.png" Component_="annotated.html" FileName="nav_g.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\nav_g.png" SelfReg="false"/>
+    <ROW File="nav_h.png" Component_="annotated.html" FileName="nav_h.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\nav_h.png" SelfReg="false"/>
+    <ROW File="open.png" Component_="annotated.html" FileName="open.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\open.png" SelfReg="false"/>
+    <ROW File="all_0.html" Component_="all_0.html" FileName="ALL_0~1.HTM|all_0.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_0.html" SelfReg="false"/>
+    <ROW File="all_0.js" Component_="all_0.html" FileName="all_0.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_0.js" SelfReg="false"/>
+    <ROW File="all_1.html" Component_="all_0.html" FileName="ALL_1~1.HTM|all_1.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_1.html" SelfReg="false"/>
+    <ROW File="all_1.js" Component_="all_0.html" FileName="all_1.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_1.js" SelfReg="false"/>
+    <ROW File="all_2.html" Component_="all_0.html" FileName="ALL_2~1.HTM|all_2.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_2.html" SelfReg="false"/>
+    <ROW File="all_2.js" Component_="all_0.html" FileName="all_2.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_2.js" SelfReg="false"/>
+    <ROW File="all_3.html" Component_="all_0.html" FileName="ALL_3~1.HTM|all_3.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_3.html" SelfReg="false"/>
+    <ROW File="all_3.js" Component_="all_0.html" FileName="all_3.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_3.js" SelfReg="false"/>
+    <ROW File="all_4.html" Component_="all_0.html" FileName="ALL_4~1.HTM|all_4.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_4.html" SelfReg="false"/>
+    <ROW File="all_4.js" Component_="all_0.html" FileName="all_4.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_4.js" SelfReg="false"/>
+    <ROW File="all_5.html" Component_="all_0.html" FileName="ALL_5~1.HTM|all_5.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_5.html" SelfReg="false"/>
+    <ROW File="all_5.js" Component_="all_0.html" FileName="all_5.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_5.js" SelfReg="false"/>
+    <ROW File="all_6.html" Component_="all_0.html" FileName="ALL_6~1.HTM|all_6.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_6.html" SelfReg="false"/>
+    <ROW File="all_6.js" Component_="all_0.html" FileName="all_6.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_6.js" SelfReg="false"/>
+    <ROW File="all_7.html" Component_="all_0.html" FileName="ALL_7~1.HTM|all_7.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_7.html" SelfReg="false"/>
+    <ROW File="all_7.js" Component_="all_0.html" FileName="all_7.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_7.js" SelfReg="false"/>
+    <ROW File="all_8.html" Component_="all_0.html" FileName="ALL_8~1.HTM|all_8.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_8.html" SelfReg="false"/>
+    <ROW File="all_8.js" Component_="all_0.html" FileName="all_8.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_8.js" SelfReg="false"/>
+    <ROW File="all_9.html" Component_="all_0.html" FileName="ALL_9~1.HTM|all_9.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_9.html" SelfReg="false"/>
+    <ROW File="all_9.js" Component_="all_0.html" FileName="all_9.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_9.js" SelfReg="false"/>
+    <ROW File="all_a.html" Component_="all_0.html" FileName="ALL_A~1.HTM|all_a.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_a.html" SelfReg="false"/>
+    <ROW File="all_a.js" Component_="all_0.html" FileName="all_a.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_a.js" SelfReg="false"/>
+    <ROW File="all_b.html" Component_="all_0.html" FileName="ALL_B~1.HTM|all_b.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_b.html" SelfReg="false"/>
+    <ROW File="all_b.js" Component_="all_0.html" FileName="all_b.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_b.js" SelfReg="false"/>
+    <ROW File="all_c.html" Component_="all_0.html" FileName="ALL_C~1.HTM|all_c.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_c.html" SelfReg="false"/>
+    <ROW File="all_c.js" Component_="all_0.html" FileName="all_c.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_c.js" SelfReg="false"/>
+    <ROW File="all_d.html" Component_="all_0.html" FileName="ALL_D~1.HTM|all_d.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_d.html" SelfReg="false"/>
+    <ROW File="all_d.js" Component_="all_0.html" FileName="all_d.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\all_d.js" SelfReg="false"/>
+    <ROW File="classes_0.html" Component_="all_0.html" FileName="CLASSE~1.HTM|classes_0.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\classes_0.html" SelfReg="false"/>
+    <ROW File="classes_0.js" Component_="all_0.html" FileName="CLASSE~1.JS|classes_0.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\classes_0.js" SelfReg="false"/>
+    <ROW File="close.svg" Component_="all_0.html" FileName="close.svg" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\close.svg" SelfReg="false"/>
+    <ROW File="files_0.html" Component_="all_0.html" FileName="FILES_~1.HTM|files_0.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\files_0.html" SelfReg="false"/>
+    <ROW File="files_0.js" Component_="all_0.html" FileName="files_0.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\files_0.js" SelfReg="false"/>
+    <ROW File="files_1.html" Component_="all_0.html" FileName="FILES_~2.HTM|files_1.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\files_1.html" SelfReg="false"/>
+    <ROW File="files_1.js" Component_="all_0.html" FileName="files_1.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\files_1.js" SelfReg="false"/>
+    <ROW File="files_2.html" Component_="all_0.html" FileName="FILES_~3.HTM|files_2.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\files_2.html" SelfReg="false"/>
+    <ROW File="files_2.js" Component_="all_0.html" FileName="files_2.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\files_2.js" SelfReg="false"/>
+    <ROW File="functions_0.html" Component_="all_0.html" FileName="FUNCTI~1.HTM|functions_0.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_0.html" SelfReg="false"/>
+    <ROW File="functions_0.js" Component_="all_0.html" FileName="FUNCTI~1.JS|functions_0.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_0.js" SelfReg="false"/>
+    <ROW File="functions_1.html" Component_="all_0.html" FileName="FUNCTI~2.HTM|functions_1.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_1.html" SelfReg="false"/>
+    <ROW File="functions_1.js" Component_="all_0.html" FileName="FUNCTI~2.JS|functions_1.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_1.js" SelfReg="false"/>
+    <ROW File="functions_2.html" Component_="all_0.html" FileName="FUNCTI~3.HTM|functions_2.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_2.html" SelfReg="false"/>
+    <ROW File="functions_2.js" Component_="all_0.html" FileName="FUNCTI~3.JS|functions_2.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_2.js" SelfReg="false"/>
+    <ROW File="functions_3.html" Component_="all_0.html" FileName="FUNCTI~4.HTM|functions_3.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_3.html" SelfReg="false"/>
+    <ROW File="functions_3.js" Component_="all_0.html" FileName="FUNCTI~4.JS|functions_3.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_3.js" SelfReg="false"/>
+    <ROW File="functions_4.html" Component_="all_0.html" FileName="FUNCTI~5.HTM|functions_4.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_4.html" SelfReg="false"/>
+    <ROW File="functions_4.js" Component_="all_0.html" FileName="FUNCTI~5.JS|functions_4.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_4.js" SelfReg="false"/>
+    <ROW File="functions_5.html" Component_="all_0.html" FileName="FUNCTI~6.HTM|functions_5.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_5.html" SelfReg="false"/>
+    <ROW File="functions_5.js" Component_="all_0.html" FileName="FUNCTI~6.JS|functions_5.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_5.js" SelfReg="false"/>
+    <ROW File="functions_6.html" Component_="all_0.html" FileName="FUNCTI~7.HTM|functions_6.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_6.html" SelfReg="false"/>
+    <ROW File="functions_6.js" Component_="all_0.html" FileName="FUNCTI~7.JS|functions_6.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_6.js" SelfReg="false"/>
+    <ROW File="functions_7.html" Component_="all_0.html" FileName="FUNCTI~8.HTM|functions_7.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_7.html" SelfReg="false"/>
+    <ROW File="functions_7.js" Component_="all_0.html" FileName="FUNCTI~8.JS|functions_7.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_7.js" SelfReg="false"/>
+    <ROW File="functions_8.html" Component_="all_0.html" FileName="FUNCTI~9.HTM|functions_8.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_8.html" SelfReg="false"/>
+    <ROW File="functions_8.js" Component_="all_0.html" FileName="FUNCTI~9.JS|functions_8.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_8.js" SelfReg="false"/>
+    <ROW File="functions_9.html" Component_="all_0.html" FileName="FUNCT~10.HTM|functions_9.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_9.html" SelfReg="false"/>
+    <ROW File="functions_9.js" Component_="all_0.html" FileName="FUNCT~10.JS|functions_9.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_9.js" SelfReg="false"/>
+    <ROW File="functions_a.html" Component_="all_0.html" FileName="FUNCT~11.HTM|functions_a.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_a.html" SelfReg="false"/>
+    <ROW File="functions_a.js" Component_="all_0.html" FileName="FUNCT~11.JS|functions_a.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_a.js" SelfReg="false"/>
+    <ROW File="functions_b.html" Component_="all_0.html" FileName="FUNCT~12.HTM|functions_b.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_b.html" SelfReg="false"/>
+    <ROW File="functions_b.js" Component_="all_0.html" FileName="FUNCT~12.JS|functions_b.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\functions_b.js" SelfReg="false"/>
+    <ROW File="mag_sel.svg" Component_="all_0.html" FileName="mag_sel.svg" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\mag_sel.svg" SelfReg="false"/>
+    <ROW File="nomatches.html" Component_="all_0.html" FileName="NOMATC~1.HTM|nomatches.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\nomatches.html" SelfReg="false"/>
+    <ROW File="search.css" Component_="all_0.html" FileName="search.css" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\search.css" SelfReg="false"/>
+    <ROW File="search.js" Component_="all_0.html" FileName="search.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\search.js" SelfReg="false"/>
+    <ROW File="searchdata.js" Component_="all_0.html" FileName="SEARCH~1.JS|searchdata.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\searchdata.js" SelfReg="false"/>
+    <ROW File="search_l.png" Component_="all_0.html" FileName="search_l.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\search_l.png" SelfReg="false"/>
+    <ROW File="search_m.png" Component_="all_0.html" FileName="search_m.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\search_m.png" SelfReg="false"/>
+    <ROW File="search_r.png" Component_="all_0.html" FileName="search_r.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\search_r.png" SelfReg="false"/>
+    <ROW File="variables_0.html" Component_="all_0.html" FileName="VARIAB~1.HTM|variables_0.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\variables_0.html" SelfReg="false"/>
+    <ROW File="variables_0.js" Component_="all_0.html" FileName="VARIAB~1.JS|variables_0.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\variables_0.js" SelfReg="false"/>
+    <ROW File="variables_1.html" Component_="all_0.html" FileName="VARIAB~2.HTM|variables_1.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\variables_1.html" SelfReg="false"/>
+    <ROW File="variables_1.js" Component_="all_0.html" FileName="VARIAB~2.JS|variables_1.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\search\variables_1.js" SelfReg="false"/>
+    <ROW File="splitbar.png" Component_="annotated.html" FileName="splitbar.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\splitbar.png" SelfReg="false"/>
+    <ROW File="sync_off.png" Component_="annotated.html" FileName="sync_off.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\sync_off.png" SelfReg="false"/>
+    <ROW File="sync_on.png" Component_="annotated.html" FileName="sync_on.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\sync_on.png" SelfReg="false"/>
+    <ROW File="tabs.css" Component_="annotated.html" FileName="tabs.css" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\tabs.css" SelfReg="false"/>
+    <ROW File="tab_a.png" Component_="annotated.html" FileName="tab_a.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\tab_a.png" SelfReg="false"/>
+    <ROW File="tab_b.png" Component_="annotated.html" FileName="tab_b.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\tab_b.png" SelfReg="false"/>
+    <ROW File="tab_h.png" Component_="annotated.html" FileName="tab_h.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\tab_h.png" SelfReg="false"/>
+    <ROW File="tab_s.png" Component_="annotated.html" FileName="tab_s.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\html\tab_s.png" SelfReg="false"/>
+    <ROW File="BlockBall.ico_1" Component_="BlockBall.ico" FileName="BLOCKB~1.ICO|BlockBall.ico" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\img\BlockBall.ico" SelfReg="false"/>
+    <ROW File="break_heart.png" Component_="BlockBall.ico" FileName="BREAK_~1.PNG|break_heart.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\img\break_heart.png" SelfReg="false"/>
+    <ROW File="heart.png" Component_="BlockBall.ico" FileName="heart.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\img\heart.png" SelfReg="false"/>
+    <ROW File="annotated.tex" Component_="annotated.tex" FileName="ANNOTA~1.TEX|annotated.tex" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\annotated.tex" SelfReg="false"/>
+    <ROW File="BlockBall.ico_2" Component_="annotated.tex" FileName="BLOCKB~1.ICO|BlockBall.ico" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\BlockBall.ico" SelfReg="false"/>
+    <ROW File="body_8cpp.tex" Component_="annotated.tex" FileName="BODY_8~1.TEX|body_8cpp.tex" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\body_8cpp.tex" SelfReg="false"/>
+    <ROW File="class_brick.tex" Component_="annotated.tex" FileName="CLASS_~1.TEX|class_brick.tex" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\class_brick.tex" SelfReg="false"/>
+    <ROW File="doxygen.sty" Component_="annotated.tex" FileName="doxygen.sty" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\doxygen.sty" SelfReg="false"/>
+    <ROW File="files.tex" Component_="annotated.tex" FileName="files.tex" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\files.tex" SelfReg="false"/>
+    <ROW File="headers_8h.tex" Component_="annotated.tex" FileName="HEADER~1.TEX|headers_8h.tex" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\headers_8h.tex" SelfReg="false"/>
+    <ROW File="bc_s.png_1" Component_="bc_s.png" FileName="bc_s.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\bc_s.png" SelfReg="false"/>
+    <ROW File="bdwn.png_1" Component_="bc_s.png" FileName="bdwn.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\bdwn.png" SelfReg="false"/>
+    <ROW File="BlockBall.ico_3" Component_="bc_s.png" FileName="BLOCKB~1.ICO|BlockBall.ico" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\BlockBall.ico" SelfReg="false"/>
+    <ROW File="closed.png_1" Component_="bc_s.png" FileName="closed.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\closed.png" SelfReg="false"/>
+    <ROW File="doc.png_1" Component_="bc_s.png" FileName="doc.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\doc.png" SelfReg="false"/>
+    <ROW File="doxygen.css_1" Component_="bc_s.png" FileName="doxygen.css" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\doxygen.css" SelfReg="false"/>
+    <ROW File="doxygen.svg_1" Component_="bc_s.png" FileName="doxygen.svg" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\doxygen.svg" SelfReg="false"/>
+    <ROW File="dynsections.js_1" Component_="bc_s.png" FileName="DYNSEC~1.JS|dynsections.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\dynsections.js" SelfReg="false"/>
+    <ROW File="folderclosed.png_1" Component_="bc_s.png" FileName="FOLDER~1.PNG|folderclosed.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\folderclosed.png" SelfReg="false"/>
+    <ROW File="folderopen.png_1" Component_="bc_s.png" FileName="FOLDER~2.PNG|folderopen.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\folderopen.png" SelfReg="false"/>
+    <ROW File="index.html_1" Component_="bc_s.png" FileName="INDEX~1.HTM|index.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\index.html" SelfReg="false"/>
+    <ROW File="jquery.js_1" Component_="bc_s.png" FileName="jquery.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\jquery.js" SelfReg="false"/>
+    <ROW File="menu.js_1" Component_="bc_s.png" FileName="menu.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\menu.js" SelfReg="false"/>
+    <ROW File="menudata.js_1" Component_="bc_s.png" FileName="menudata.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\menudata.js" SelfReg="false"/>
+    <ROW File="nav_f.png_1" Component_="bc_s.png" FileName="nav_f.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\nav_f.png" SelfReg="false"/>
+    <ROW File="nav_g.png_1" Component_="bc_s.png" FileName="nav_g.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\nav_g.png" SelfReg="false"/>
+    <ROW File="nav_h.png_1" Component_="bc_s.png" FileName="nav_h.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\nav_h.png" SelfReg="false"/>
+    <ROW File="open.png_1" Component_="bc_s.png" FileName="open.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\open.png" SelfReg="false"/>
+    <ROW File="close.svg_1" Component_="close.svg" FileName="close.svg" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\search\close.svg" SelfReg="false"/>
+    <ROW File="mag_sel.svg_1" Component_="close.svg" FileName="mag_sel.svg" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\search\mag_sel.svg" SelfReg="false"/>
+    <ROW File="nomatches.html_1" Component_="close.svg" FileName="NOMATC~1.HTM|nomatches.html" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\search\nomatches.html" SelfReg="false"/>
+    <ROW File="search.css_1" Component_="close.svg" FileName="search.css" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\search\search.css" SelfReg="false"/>
+    <ROW File="search.js_1" Component_="close.svg" FileName="search.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\search\search.js" SelfReg="false"/>
+    <ROW File="searchdata.js_1" Component_="close.svg" FileName="SEARCH~1.JS|searchdata.js" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\search\searchdata.js" SelfReg="false"/>
+    <ROW File="search_l.png_1" Component_="close.svg" FileName="search_l.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\search\search_l.png" SelfReg="false"/>
+    <ROW File="search_m.png_1" Component_="close.svg" FileName="search_m.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\search\search_m.png" SelfReg="false"/>
+    <ROW File="search_r.png_1" Component_="close.svg" FileName="search_r.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\search\search_r.png" SelfReg="false"/>
+    <ROW File="splitbar.png_1" Component_="bc_s.png" FileName="splitbar.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\splitbar.png" SelfReg="false"/>
+    <ROW File="sync_off.png_1" Component_="bc_s.png" FileName="sync_off.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\sync_off.png" SelfReg="false"/>
+    <ROW File="sync_on.png_1" Component_="bc_s.png" FileName="sync_on.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\sync_on.png" SelfReg="false"/>
+    <ROW File="tabs.css_1" Component_="bc_s.png" FileName="tabs.css" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\tabs.css" SelfReg="false"/>
+    <ROW File="tab_a.png_1" Component_="bc_s.png" FileName="tab_a.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\tab_a.png" SelfReg="false"/>
+    <ROW File="tab_b.png_1" Component_="bc_s.png" FileName="tab_b.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\tab_b.png" SelfReg="false"/>
+    <ROW File="tab_h.png_1" Component_="bc_s.png" FileName="tab_h.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\tab_h.png" SelfReg="false"/>
+    <ROW File="tab_s.png_1" Component_="bc_s.png" FileName="tab_s.png" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\html\tab_s.png" SelfReg="false"/>
+    <ROW File="BlockBall.ico_4" Component_="BlockBall.ico_1" FileName="BLOCKB~1.ICO|BlockBall.ico" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\latex\BlockBall.ico" SelfReg="false"/>
+    <ROW File="doxygen.sty_1" Component_="BlockBall.ico_1" FileName="doxygen.sty" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\latex\doxygen.sty" SelfReg="false"/>
+    <ROW File="longtable_doxygen.sty" Component_="BlockBall.ico_1" FileName="LONGTA~1.STY|longtable_doxygen.sty" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\latex\longtable_doxygen.sty" SelfReg="false"/>
+    <ROW File="make.bat" Component_="BlockBall.ico_1" FileName="make.bat" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\latex\make.bat" SelfReg="false"/>
+    <ROW File="Makefile" Component_="BlockBall.ico_1" FileName="Makefile" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\latex\Makefile" SelfReg="false"/>
+    <ROW File="refman.tex" Component_="BlockBall.ico_1" FileName="refman.tex" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\latex\refman.tex" SelfReg="false"/>
+    <ROW File="tabu_doxygen.sty" Component_="BlockBall.ico_1" FileName="TABU_D~1.STY|tabu_doxygen.sty" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\latex\tabu_doxygen.sty" SelfReg="false"/>
+    <ROW File="longtable_doxygen.sty_1" Component_="annotated.tex" FileName="LONGTA~1.STY|longtable_doxygen.sty" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\longtable_doxygen.sty" SelfReg="false"/>
+    <ROW File="main_8cpp.tex" Component_="annotated.tex" FileName="MAIN_8~1.TEX|main_8cpp.tex" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\main_8cpp.tex" SelfReg="false"/>
+    <ROW File="make.bat_1" Component_="annotated.tex" FileName="make.bat" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\make.bat" SelfReg="false"/>
+    <ROW File="Makefile_1" Component_="annotated.tex" FileName="Makefile" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\Makefile" SelfReg="false"/>
+    <ROW File="refman.tex_1" Component_="annotated.tex" FileName="refman.tex" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\refman.tex" SelfReg="false"/>
+    <ROW File="tabu_doxygen.sty_1" Component_="annotated.tex" FileName="TABU_D~1.STY|tabu_doxygen.sty" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\latex\tabu_doxygen.sty" SelfReg="false"/>
+    <ROW File="main.cpp" Component_="allegro.log" FileName="main.cpp" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\main.cpp" SelfReg="false"/>
+    <ROW File="body.o" Component_="body.o" FileName="body.o" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\obj\Debug\body.o" SelfReg="false"/>
+    <ROW File="main.o" Component_="body.o" FileName="main.o" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\obj\Debug\main.o" SelfReg="false"/>
+    <ROW File="Block_Impact.wav" Component_="Block_Impact.wav" FileName="BLOCK_~1.WAV|Block_Impact.wav" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\sounds\Block_Impact.wav" SelfReg="false"/>
+    <ROW File="End.ogg" Component_="Block_Impact.wav" FileName="End.ogg" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\sounds\End.ogg" SelfReg="false"/>
+    <ROW File="Lost_Life.wav" Component_="Block_Impact.wav" FileName="LOST_L~1.WAV|Lost_Life.wav" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\sounds\Lost_Life.wav" SelfReg="false"/>
+    <ROW File="Music.ogg" Component_="Block_Impact.wav" FileName="Music.ogg" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\sounds\Music.ogg" SelfReg="false"/>
+    <ROW File="Paddle_Impact.wav" Component_="Block_Impact.wav" FileName="PADDLE~1.WAV|Paddle_Impact.wav" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\sounds\Paddle_Impact.wav" SelfReg="false"/>
+    <ROW File="Prologue.wav" Component_="Block_Impact.wav" FileName="Prologue.wav" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\sounds\Prologue.wav" SelfReg="false"/>
+    <ROW File="Wall_Impact.wav" Component_="Block_Impact.wav" FileName="WALL_I~1.WAV|Wall_Impact.wav" Attributes="0" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\sounds\Wall_Impact.wav" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" PackageFolder="Setup Files" Languages="en;de;pl;ru" LangOpt="1" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\img\BlockBall.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" LangsDialog="true" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_de.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_pl.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_ru.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;graphite\fragments\FolderDlg.aip"/>
+    <ROW Fragment="LanguageDlg.aip" Path="&lt;AI_THEMES&gt;graphite\fragments\LanguageDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;graphite\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;graphite\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;graphite\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;graphite\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;graphite\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;graphite\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;graphite\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractFiles" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="LanguageDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Next" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="1401"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Next" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND MaintenanceTypeOption=&quot;Remove&quot;" Ordering="1403"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND MaintenanceTypeOption=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Next" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND MaintenanceTypeOption=&quot;Repair&quot;" Ordering="1402"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND MaintenanceTypeOption=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND MaintenanceTypeOption=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND MaintenanceTypeOption=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="CustomActionData" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractFiles" Type="1" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="AI_ExePath"/>
+    <ROW Feature_="MainFeature" Component_="allegro5.0.10monolithmtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro.log"/>
+    <ROW Feature_="MainFeature" Component_="allegro5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro5.0.10monolithmddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro5.0.10monolithmd.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro5.0.10monolithmtdebug.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="allegro5.0.10monolithmt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_acodec5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_acodec5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_acodec5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_acodec5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_audio5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_audio5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_audio5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_audio5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_color5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_color5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_color5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_color5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_dialog5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_dialog5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_dialog5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_dialog5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_font5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_font5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_font5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_font5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_image5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_image5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_image5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_image5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_memfile5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_memfile5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_memfile5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_memfile5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_physfs5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_physfs5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_physfs5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_physfs5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_primitives5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_primitives5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_primitives5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_primitives5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_ttf5.0.10mddebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_ttf5.0.10md.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_ttf5.0.10mtdebug.dll"/>
+    <ROW Feature_="MainFeature" Component_="allegro_ttf5.0.10mt.dll"/>
+    <ROW Feature_="MainFeature" Component_="Blockball.exe"/>
+    <ROW Feature_="MainFeature" Component_="Blockball.exe_1"/>
+    <ROW Feature_="MainFeature" Component_="EasyModeSave.txt"/>
+    <ROW Feature_="MainFeature" Component_="Gameplay.ttf"/>
+    <ROW Feature_="MainFeature" Component_="annotated.html"/>
+    <ROW Feature_="MainFeature" Component_="all_0.html"/>
+    <ROW Feature_="MainFeature" Component_="BlockBall.ico"/>
+    <ROW Feature_="MainFeature" Component_="annotated.tex"/>
+    <ROW Feature_="MainFeature" Component_="bc_s.png"/>
+    <ROW Feature_="MainFeature" Component_="close.svg"/>
+    <ROW Feature_="MainFeature" Component_="BlockBall.ico_1"/>
+    <ROW Feature_="MainFeature" Component_="body.o"/>
+    <ROW Feature_="MainFeature" Component_="Block_Impact.wav"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="BlockBall.exe" SourcePath="..\Studia\Semestr 6\Grafika Komputerowa\Projekt\Blockball\img\BlockBall.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1397"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractFiles" Sequence="1399" Builds="DefaultBuild"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="1398"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="SETUPEXEDIR OR (REMOVE=&quot;ALL&quot;)" Description="This package can only be run from a bootstrapper." DescriptionLocId="AI.LaunchCondition.RequireBootstrapper" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Blockball" Directory_="SHORTCUTDIR" Name="BLOCKB~1|Blockball" Component_="Blockball.exe_1" Target="[#Blockball.exe_1]" Description="Blockball" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Blockball_1" Directory_="DesktopFolder" Name="BLOCKB~1|Blockball" Component_="Blockball.exe_1" Target="[#Blockball.exe_1]" Description="Blockball" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="graphite"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
